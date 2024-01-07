@@ -9,8 +9,8 @@ To make the change persistent, you can add a udev rule:
 
 ```
 # Allow screen brightness control for everyone.
-
-$ > /etc/udev/rules.d/80-backlight.rules echo 'ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight", RUN+="/bin/chmod a+w /sys/class/backlight/%k/brightness"'
+$ > /etc/udev/rules.d/80-backlight.rules \
+    echo 'ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight", RUN+="/bin/chmod a+w /sys/class/backlight/%k/brightness"'
 
 # Enact the rule.
 $ sudo udevadm trigger --verbose --action=add /sys/class/backlight/intel_backlight/

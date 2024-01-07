@@ -1,0 +1,2 @@
+set -- $1 /sys/class/backlight/*/brightness
+echo $((`cat $2` $1)) > $2

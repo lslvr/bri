@@ -1,5 +1,5 @@
 # bri
-Simplest screen brightness control.
+> Simplest screen brightness control.
 
 
 ### Installation.
